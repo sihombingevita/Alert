@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oc0-ga-MpF">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewControllerId" id="BYZ-38-t0r" customClass="AlertViewController" customModule="Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh7-a1-3J3">
+                                <rect key="frame" x="138" y="172" width="117" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Simple Alert"/>
+                                <connections>
+                                    <action selector="simpleAlertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sbg-p6-2R3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc0-R1-uff">
+                                <rect key="frame" x="79.333333333333329" y="282" width="234.66666666666669" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alert with distractive button"/>
+                                <connections>
+                                    <action selector="simpleAlertDistractiveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oE-8k-ocJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUJ-GJ-kEu">
+                                <rect key="frame" x="69" y="337" width="255" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alert with more than 2 buttons"/>
+                                <connections>
+                                    <action selector="alertWithMoreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1U-2E-LgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-nK-BXa">
+                                <rect key="frame" x="104" y="392" width="185" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alert with UITextField"/>
+                                <connections>
+                                    <action selector="alertWithUITextfieldTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKp-0N-l8R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgF-fE-jr8">
+                                <rect key="frame" x="108" y="227" width="177" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Simple Action Sheet"/>
+                                <connections>
+                                    <action selector="simpleAlertSheetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xBt-bt-5rI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bo6-nK-BXa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IBa-wB-cnq"/>
+                            <constraint firstItem="bh7-a1-3J3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nyl-m0-Ifw"/>
+                            <constraint firstItem="Dc0-R1-uff" firstAttribute="top" secondItem="BgF-fE-jr8" secondAttribute="bottom" constant="20" id="QNL-eZ-uEk"/>
+                            <constraint firstItem="bo6-nK-BXa" firstAttribute="top" secondItem="WUJ-GJ-kEu" secondAttribute="bottom" constant="20" id="ZEe-lP-b0s"/>
+                            <constraint firstItem="bh7-a1-3J3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="aUX-s9-Rzy"/>
+                            <constraint firstItem="Dc0-R1-uff" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fJw-uR-4vx"/>
+                            <constraint firstItem="BgF-fE-jr8" firstAttribute="top" secondItem="bh7-a1-3J3" secondAttribute="bottom" constant="20" id="hRQ-rB-vUH"/>
+                            <constraint firstItem="WUJ-GJ-kEu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ipn-Hs-HFn"/>
+                            <constraint firstItem="WUJ-GJ-kEu" firstAttribute="top" secondItem="Dc0-R1-uff" secondAttribute="bottom" constant="20" id="pps-x0-aRi"/>
+                            <constraint firstItem="BgF-fE-jr8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wSx-mi-XtX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sf2-xl-XNR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cgx-yq-eaK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oc0-ga-MpF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sGe-IT-fVG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dq3-fM-VVK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2r-iF-1eS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
